@@ -23,9 +23,8 @@ walkie --version
 
 ```
 walkie auth      # login, logout, status
-walkie sessions  # create, list, get, search, enrich, download
+walkie sessions  # upload, list, get, search, enrich, download
 walkie config    # manage local settings
-walkie agent     # agent workflows (coming soon)
 walkie billing   # check usage & plans
 ```
 
