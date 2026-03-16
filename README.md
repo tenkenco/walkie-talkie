@@ -18,7 +18,6 @@ npm i -g @tenken/walkie-cli
 walkie --version
 ```
 
-
 ## Usage
 
 ```
@@ -30,9 +29,17 @@ walkie billing   # check usage & plans
 
 Run `walkie --help` or `walkie <group> --help` for details on any command.
 
-
 ## Docs & links
 
 - Product & docs: [tenken.co](https://tenken.co)
 - Discord: [Join the community](https://discord.com/invite/GCBjdrus)
 
+## Agent Examples
+
+Try out these public RAG agents powered by Walkie:
+
+- [Research Assistant](docs/agents/research-assistant.md) — Web search + synthesis
+- [Creative Writer](docs/agents/creative-writer.md) — Brainstorming, drafting, editing
+- [Software Developer](docs/agents/dev-partner.md) — Debug, code review, architecture
+- [Finance Advisor](docs/agents/finance-advisor.md) — Research, analysis, planning
+- [Legal Counsel](docs/agents/legal-counsel.md) — Research, compliance, concepts
