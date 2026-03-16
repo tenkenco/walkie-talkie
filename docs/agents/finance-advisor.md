@@ -64,34 +64,69 @@ curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
 
 ## Usage Examples
 
-### Example 1: Market Research
+### Example 1: Diversification Theory
 
 ```bash
-walkie hub ask finance-advisor "What is the current state of cryptocurrency markets in 2026?"
+walkie hub ask finance-advisor --prompt "Why does diversification actually reduce risk — isn't it just averaging down returns?"
 ```
 
-### Example 2: Investment Analysis
-
 ```bash
-walkie hub ask finance-advisor "What are the pros and cons of investing in index funds vs ETFs?"
+curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Why does diversification actually reduce risk — isn'\''t it just averaging down returns?"}'
 ```
 
-### Example 3: Retirement Planning
+### Example 2: Sequence-of-Returns Risk
 
 ```bash
-walkie hub ask finance-advisor "I am 30 years old making $100k/year. How much should I save for retirement?"
+walkie hub ask finance-advisor --prompt "How does sequence-of-returns risk work and why does it matter so much in the early years of retirement?"
 ```
 
-### Example 4: Budget Planning
-
 ```bash
-walkie hub ask finance-advisor "What is the 50/30/20 budgeting rule and how do I apply it?"
+curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "How does sequence-of-returns risk work and why does it matter so much in the early years of retirement?"}'
 ```
 
-### Example 5: Concept Explanation
+### Example 3: Understanding Duration
 
 ```bash
-walkie hub ask finance-advisor "Explain compound interest in simple terms"
+walkie hub ask finance-advisor --prompt "Explain what bond duration means for a portfolio without the jargon overload."
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Explain what bond duration means for a portfolio without the jargon overload."}'
+```
+
+### Example 4: Reading Startup Unit Economics
+
+```bash
+walkie hub ask finance-advisor --prompt "Walk me through how to read a startup's unit economics critically — what should I be skeptical of?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Walk me through how to read a startup'\''s unit economics critically — what should I be skeptical of?"}'
+```
+
+### Example 5: Venture Power Law
+
+```bash
+walkie hub ask finance-advisor --prompt "Why do venture returns follow a power law, and what does that mean for how VCs think about portfolio construction?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/finance-advisor \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Why do venture returns follow a power law, and what does that mean for how VCs think about portfolio construction?"}'
 ```
 
 ## Important Disclaimer

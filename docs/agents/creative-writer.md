@@ -64,35 +64,76 @@ curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
 
 ## Usage Examples
 
-### Example 1: Brainstorm Ideas
+### Example 1: Embodying Feeling Through Objects
 
 ```bash
-walkie hub ask creative-writer "Give me 10 creative campaign ideas for a sustainable fashion brand"
+walkie hub ask creative-writer --prompt "How do I anchor grief in physical objects the way Ocean Vuong does, without it feeling decorative?"
 ```
-
-### Example 2: Draft Content
 
 ```bash
-walkie hub ask creative-writer "Write a professional cold email to a potential client in the fintech space"
+curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "How do I anchor grief in physical objects the way Ocean Vuong does, without it feeling decorative?"}'
 ```
 
-### Example 3: Edit/Improve
+### Example 2: Dialogue and Subtext
 
 ```bash
-walkie hub ask creative-writer "Improve this paragraph: We offer the best solutions for businesses. Our team is experienced and can help you succeed."
+walkie hub ask creative-writer --prompt "My dialogue explains too much. How do I build Hemingway-style subtext where the real tension stays beneath the surface?"
 ```
-
-### Example 4: Adapt Tone
 
 ```bash
-walkie hub ask creative-writer "Rewrite this for LinkedIn: Check out our new product! It is awesome and you should buy it!"
+curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "My dialogue explains too much. How do I build Hemingway-style subtext where the real tension stays beneath the surface?"}'
 ```
 
-### Example 5: Interactive Chat
+### Example 3: Fix Overwritten Metaphors
+
+```bash
+walkie hub ask creative-writer --prompt "My metaphors are overwritten and tangled — how do I fix chains of imagery that compete with each other?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "My metaphors are overwritten and tangled — how do I fix chains of imagery that compete with each other?"}'
+```
+
+### Example 4: Fragmentation and Lyric Structure
+
+```bash
+walkie hub ask creative-writer --prompt "I'm writing a lyric essay and losing control of the associative logic. How do I use fragmentation without losing coherence?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "I'\''m writing a lyric essay and losing control of the associative logic. How do I use fragmentation without losing coherence?"}'
+```
+
+### Example 5: Endings That Resonate
+
+```bash
+walkie hub ask creative-writer --prompt "How do I write an ending that actually resonates instead of just stopping?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/creative-writer \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "How do I write an ending that actually resonates instead of just stopping?"}'
+```
+
+### Example 6: Interactive Craft Session
 
 ```bash
 walkie hub chat creative-writer
-# Then collaborate on writing projects
+# Paste your draft and work through revision together
 ```
 
 ## Limitations

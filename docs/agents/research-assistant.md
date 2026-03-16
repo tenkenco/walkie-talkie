@@ -64,29 +64,76 @@ curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
 
 ## Usage Examples
 
-### Example 1: Current Events Research
+### Example 1: Systematic Literature Review
 
 ```bash
-walkie hub ask research-assistant "What is the current state of quantum computing in 2026?"
+walkie hub ask research-assistant --prompt "Walk me through how to conduct a literature review that's actually systematic, not just a collection of papers I found."
 ```
-
-### Example 2: Synthesize Topic
 
 ```bash
-walkie hub ask research-assistant "Give me a summary of the best practices for building RAG systems in 2026"
+curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Walk me through how to conduct a literature review that'\''s actually systematic, not just a collection of papers I found."}'
 ```
 
-### Example 3: Compare Options
+### Example 2: Interpreting P-Values
 
 ```bash
-walkie hub ask research-assistant "Compare Claude vs Gemini vs GPT for enterprise use cases"
+walkie hub ask research-assistant --prompt "What does a p-value tell me and what does it absolutely not tell me?"
 ```
 
-### Example 4: Interactive Chat
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "What does a p-value tell me and what does it absolutely not tell me?"}'
+```
+
+### Example 3: Causal vs Correlational Claims
+
+```bash
+walkie hub ask research-assistant --prompt "How do researchers distinguish between causal claims and strong correlations? How do I evaluate that in a paper I'm reading?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "How do researchers distinguish between causal claims and strong correlations? How do I evaluate that in a paper I'\''m reading?"}'
+```
+
+### Example 4: Difference-in-Differences Validity
+
+```bash
+walkie hub ask research-assistant --prompt "Our study uses a difference-in-differences design. What makes that credible or weak?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Our study uses a difference-in-differences design. What makes that credible or weak?"}'
+```
+
+### Example 5: Reading Research Critically
+
+```bash
+walkie hub ask research-assistant --prompt "What did the replication crisis actually reveal about how to read published research?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/research-assistant \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "What did the replication crisis actually reveal about how to read published research?"}'
+```
+
+### Example 6: Interactive Research Session
 
 ```bash
 walkie hub chat research-assistant
-# Then type your questions interactively
+# Work through a paper or methodology question together
 ```
 
 ## Limitations

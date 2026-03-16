@@ -64,34 +64,69 @@ curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
 
 ## Usage Examples
 
-### Example 1: Debug an Error
+### Example 1: Monolith vs Microservices
 
 ```bash
-walkie hub ask dev-partner "My React useEffect is running infinitely. Here is my code: useEffect(() => { setCount(count + 1); }, [count]);"
+walkie hub ask dev-partner --prompt "We're considering splitting our monolith into microservices. Walk me through when that's the wrong choice."
 ```
 
-### Example 2: Code Review
-
 ```bash
-walkie hub ask dev-partner "Review this code for security issues: async function getUser(id) { return db.query(\"SELECT * FROM users WHERE id = \" + id); }"
+curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "We'\''re considering splitting our monolith into microservices. Walk me through when that'\''s the wrong choice."}'
 ```
 
-### Example 3: Architecture Advice
+### Example 2: Debugging Under Load
 
 ```bash
-walkie hub ask dev-partner "What is the best way to handle real-time updates in a React app with 1000+ concurrent users?"
+walkie hub ask dev-partner --prompt "My app has latency spikes under load but not in testing. How should I investigate what's actually causing it?"
 ```
 
-### Example 4: Explain a Concept
-
 ```bash
-walkie hub ask dev-partner "Explain the difference between SQL and NoSQL databases in simple terms"
+curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "My app has latency spikes under load but not in testing. How should I investigate what'\''s actually causing it?"}'
 ```
 
-### Example 5: Best Practices
+### Example 3: RAG Failure Modes
 
 ```bash
-walkie hub ask dev-partner "What are the best practices for error handling in Node.js Express APIs?"
+walkie hub ask dev-partner --prompt "Our RAG pipeline returns technically relevant documents but the LLM responses are still poor. What failure modes should I look for?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Our RAG pipeline returns technically relevant documents but the LLM responses are still poor. What failure modes should I look for?"}'
+```
+
+### Example 4: Zero-Downtime Migrations
+
+```bash
+walkie hub ask dev-partner --prompt "We need zero-downtime database migrations on a system that's always being written to. What's the safest approach?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "We need zero-downtime database migrations on a system that'\''s always being written to. What'\''s the safest approach?"}'
+```
+
+### Example 5: Feature Flag Complexity
+
+```bash
+walkie hub ask dev-partner --prompt "We use feature flags everywhere and the codebase is getting messy. How do I avoid creating hidden complexity?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/dev-partner \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "We use feature flags everywhere and the codebase is getting messy. How do I avoid creating hidden complexity?"}'
 ```
 
 ## Limitations

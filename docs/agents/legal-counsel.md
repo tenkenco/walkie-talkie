@@ -64,34 +64,69 @@ curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
 
 ## Usage Examples
 
-### Example 1: Regulatory Research
+### Example 1: Founder Agreement Terms
 
 ```bash
-walkie hub ask legal-counsel "What are the key GDPR requirements for US companies handling EU customer data?"
+walkie hub ask legal-counsel --prompt "What are the key terms in a founder agreement that prevent expensive disputes down the road?"
 ```
 
-### Example 2: Contract Basics
-
 ```bash
-walkie hub ask legal-counsel "What are the essential elements of a valid contract?"
+curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "What are the key terms in a founder agreement that prevent expensive disputes down the road?"}'
 ```
 
-### Example 3: Compliance Checklist
+### Example 2: Copyright vs Patent
 
 ```bash
-walkie hub ask legal-counsel "What should a startup include in their terms of service?"
+walkie hub ask legal-counsel --prompt "What's the practical difference between copyright and patent protection for a software company?"
 ```
 
-### Example 4: Explain Legal Concept
-
 ```bash
-walkie hub ask legal-counsel "Explain the difference between trademark, copyright, and patent in simple terms"
+curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "What'\''s the practical difference between copyright and patent protection for a software company?"}'
 ```
 
-### Example 5: Risk Analysis
+### Example 3: SaaS Contract Clauses
 
 ```bash
-walkie hub ask legal-counsel "What are the legal risks of using open source software in a commercial product?"
+walkie hub ask legal-counsel --prompt "Which SaaS contract clauses actually matter and which are just boilerplate to negotiate away?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "Which SaaS contract clauses actually matter and which are just boilerplate to negotiate away?"}'
+```
+
+### Example 4: Employee vs Contractor Classification
+
+```bash
+walkie hub ask legal-counsel --prompt "How do I think about employee vs contractor classification risk as we scale our team?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "How do I think about employee vs contractor classification risk as we scale our team?"}'
+```
+
+### Example 5: Open Source Licensing Risk
+
+```bash
+walkie hub ask legal-counsel --prompt "What open source licensing issues can create hidden commercialization risk for a startup?"
+```
+
+```bash
+curl -X POST https://prod-api.tenken.co/api/agent/legal-counsel \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_CONSUMER_TOKEN" \
+  -d '{"prompt": "What open source licensing issues can create hidden commercialization risk for a startup?"}'
 ```
 
 ## Important Disclaimer
